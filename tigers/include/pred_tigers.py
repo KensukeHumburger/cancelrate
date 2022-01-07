@@ -3,7 +3,7 @@
 #import numpy as np
 #import numpy.random as random
 #import pandas as pd
-from pandas import Series, DataFrame
+from pandas import DataFrame
 
 # 機械学習モジュール
 import sklearn
