@@ -4,6 +4,8 @@ from django.views.generic.list import ListView
 # Create your views here.
 from django.http import HttpResponse
 from django.template import loader
+import sys
+sys.path.append('anaconda3/lib/site-packages')
 import numpy as np
 
 def index(request):
