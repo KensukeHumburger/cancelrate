@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # predict
-import numpy as np
-import numpy.random as random
+#import numpy as np
+#import numpy.random as random
 from pandas import Series, DataFrame
 import pandas as pd
 
@@ -17,7 +17,7 @@ class PredTigers:
         self.params = {}
     #
     def load_model(self):
-        filename = 'hanshintigers\tigers\files\model_XGB.pickle'
+        filename = 'tigers/files/model_XGB.pickle'
         model = pickle.load(open(filename, 'rb'))
         return model
     
