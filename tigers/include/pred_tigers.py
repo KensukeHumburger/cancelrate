@@ -17,7 +17,7 @@ class PredTigers:
         self.params = {}
     #
     def load_model(self):
-        filename = 'tigers/files/model_XGB.pickle'
+        filename = 'hanshintigers\tigers\files\model_XGB.pickle'
         model = pickle.load(open(filename, 'rb'))
         return model
     
