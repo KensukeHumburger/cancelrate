@@ -2,8 +2,8 @@
 # predict
 #import numpy as np
 #import numpy.random as random
+#import pandas as pd
 from pandas import Series, DataFrame
-import pandas as pd
 
 # 機械学習モジュール
 import sklearn
