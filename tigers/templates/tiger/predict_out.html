@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+    <head>
+        <title>予測結果</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/tiger.css' %}">
+    </head>
+
+    <body>
+        <h1>Prediction Result</h1> 
+
+        <div>
+        <h2> {{tigers}} % </h2>
+        </div>
+        
+        <div>
+        <a href="{% url 'tigers:index' %}" class="btn btn-primary">戻る</a>
+        </div>
+    </body>
+
+</html>

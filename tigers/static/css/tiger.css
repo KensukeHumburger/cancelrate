@@ -1,0 +1,14 @@
+h1 {
+    color: #9b4101;
+    font-family: 'メイリオ', 'Meiryo';
+}
+
+body {
+    padding-left: 30px; /* 左の余白 */
+    background-color: rgb(248, 242, 164);
+    font-family: 'メイリオ', 'Meiryo';
+}
+
+div {
+    margin-bottom: 20px; /* 要素下の隙間 */
+  }

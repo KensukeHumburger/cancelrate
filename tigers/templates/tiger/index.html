@@ -1,0 +1,49 @@
+{% load static %}
+<html>
+    <head>
+        <title>キャンセル率予測</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/tiger.css' %}">
+    </head>
+
+    <body>  
+        <form action="{% url 'tigers:predict'  %}" method="post">
+            {% csrf_token %}
+
+            <h1>CancelRate Predict</h1>
+
+            <div>
+            <label>
+            最高気温
+            <p><input type="number" name="hi" max="45" min="-35"></p>
+            </label>
+            </div>
+
+            <div>
+            <label>
+            最低気温
+            <p><input type="number" name="low" max="35" min="-45"></p>
+            </label>
+            </div>
+
+            <div>
+            <label>
+            降水量
+            <p><input type="number" name="rain" max="1000" min="0"></p>
+            </label>
+            </div>
+
+            <div>
+            <label>
+            降雪量
+            <p><input type="number" name="snow" max="1000" min="0"></p>
+            </label>
+            </div>
+
+            <div>
+            <button type="submit" class="btn btn-primary">予測</button>
+            </div>
+        </form>
+    </body>
+</html>
