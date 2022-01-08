@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 # predict
-#import numpy as np
-#import numpy.random as random
-#import pandas as pd
+import numpy as np
+import numpy.random as random
+import pandas as pd
+
 from pandas import DataFrame
 
 # 機械学習モジュール
