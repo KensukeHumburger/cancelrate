@@ -1,8 +1,9 @@
+"""
 # -*- coding: utf-8 -*-
 # predict
-import numpy as np
-import numpy.random as random
-import pandas as pd
+#import numpy as np
+#import numpy.random as random
+#import pandas as pd
 
 from pandas import DataFrame
 
@@ -35,3 +36,4 @@ class PredTigers:
         df = df.assign(snow = pd.to_numeric(df.snow))
         #print(df.info() )
         return df
+
