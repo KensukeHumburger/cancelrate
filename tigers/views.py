@@ -5,7 +5,7 @@ from django.views.generic.list import ListView
 from django.http import HttpResponse
 from django.template import loader
 
-#pred_tigers.pyからコピペ########################################
+#pred_tigers.pyからコピペ#######################################
 from pandas import DataFrame
 # 機械学習モジュール
 import sklearn
