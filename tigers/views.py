@@ -5,50 +5,16 @@ from django.views.generic.list import ListView
 from django.http import HttpResponse
 from django.template import loader
 
-#pred_tigers.pyからコピペ#######################################
-from pandas import DataFrame
-# 機械学習モジュール
-import sklearn
-import pickle
-import xgboost as xgb
-from sklearn.model_selection import cross_validate, KFold
-import pandas as pd
-
-#
-class PredTigers:
-    def __init__(self):
-        self.params = {}
-    #
-    def load_model(self):
-        filename = 'tigers/files/model_XGB.pickle'
-        model = pickle.load(open(filename, 'rb'))
-        return model
-    
-    def load_data(self, params):
-        dat = {'hi':[params['hi']]
-        ,'low':[params['low']]
-        ,'rain':[params['rain']]
-        ,'snow':[params['snow']]
-        }
-        df = DataFrame(dat)
-        df = df.assign(hi = pd.to_numeric(df.hi))
-        df = df.assign(low = pd.to_numeric(df.low))
-        df = df.assign(rain = pd.to_numeric(df.rain))
-        df = df.assign(snow = pd.to_numeric(df.snow))
-        #print(df.info() )
-        return df
-####################################################################
-
 def index(request):
     return render(request, 'tiger/index.html', {})
 
 def predict_input(request):
-    #import PredTigers
+    from tigers.include.pred_tigers import PredTigers
     return render(request, 'tiger/index.html')
 
 def predict(request):
     if request.method == 'POST':
-        #import PredTigers
+        from tigers.include.pred_tigers import PredTigers
         hi = request.POST.get('hi')
         low = request.POST.get('low')
         rain = request.POST.get('rain')

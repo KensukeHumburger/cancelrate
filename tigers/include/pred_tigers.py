@@ -1,9 +1,9 @@
-"""
+
 # -*- coding: utf-8 -*-
 # predict
 #import numpy as np
 #import numpy.random as random
-#import pandas as pd
+import pandas as pd
 
 from pandas import DataFrame
 
