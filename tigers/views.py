@@ -4,14 +4,14 @@ from django.views.generic.list import ListView
 # Create your views here.
 from django.http import HttpResponse
 from django.template import loader
-import pandas as pd
-from pandas import DataFrame
+#import pandas as pd
+#from pandas import DataFrame
 
 # 機械学習
-import sklearn
-import pickle
-import xgboost as xgb
-from sklearn.model_selection import cross_validate, KFold
+#import sklearn
+#import pickle
+#import xgboost as xgb
+#from sklearn.model_selection import cross_validate, KFold
 
 def index(request):
     return render(request, 'tiger/index.html', {})
